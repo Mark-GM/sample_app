@@ -38,6 +38,7 @@ end
 
 group :production do
   ruby "2.5.1"
+  gem 'puma', '3.11.4'
   gem 'pg', '1.0.0'
 end
 
