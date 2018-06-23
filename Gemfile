@@ -8,6 +8,7 @@ end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.6'
+gem 'bootstrap-sass', '3.3.7'
 gem 'puma',         '3.11.4'
 gem 'sass-rails',   '5.0.7'
 gem 'uglifier',     '4.1.11'
@@ -38,7 +39,6 @@ end
 
 group :production do
   ruby "2.5.1"
-  gem 'puma', '3.11.4'
   gem 'pg', '1.0.0'
 end
 
