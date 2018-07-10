@@ -12,6 +12,7 @@ class UsersController < ApplicationController
     if @user.save
       # Handle a successful save
       # By flashing a success alert and redirection to newly created profile
+      log_in @user
       flash[:success] = "Welcome to the Sample App!"
       redirect_to @user
     else
