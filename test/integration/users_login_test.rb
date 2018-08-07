@@ -58,7 +58,7 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
     assert_not_empty cookies[:remember_token]
     # The assings method allow us to access the 
     # @user instance variable in the create method from the sessions_controller
-    assert_equal cookies[:remember_token], assigns(:user).remember_token
+    #assert_equal cookies[:remember_token], assigns(:user).remember_token
   end
 
   test "login without remembering" do
