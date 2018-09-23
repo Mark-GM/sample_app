@@ -1,5 +1,7 @@
 if Rails.env.production?
   CarrierWave.configure do |config|
+    config.fog_provider = 'fog/backblaze'
+    
     config.fog_credentials = {
       # Configuration for Backblaze B2
       :provider              => 'backblaze',
