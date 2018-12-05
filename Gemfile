@@ -45,7 +45,7 @@ group :test do
 end
 
 group :production do
-  ruby "2.5.1"
+  ruby "2.5.3"
   gem 'pg', '1.0.0'
   gem 'fog-backblaze', '0.2.0'
 end

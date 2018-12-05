@@ -15,6 +15,9 @@ class UsersProfileTest < ActionDispatch::IntegrationTest
     # This checks for an img tag with class gravatar
     # inside a top-level heading tag (h1).
     assert_select 'h1>img.gravatar'
+    assert_select 'div.stats'
+    assert_match @user.following.count.to_s, response.body
+    assert_match @user.followers.count.to_s, response.body
     assert_match @user.microposts.count.to_s, response.body
     assert_select 'div.pagination'
     @user.microposts.paginate(page: 1).each do |micropost|
