@@ -5,48 +5,48 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-
+ruby "2.5.5"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.6'
-gem 'bcrypt', '3.1.12'
-gem 'faker',  '1.9.1'
-gem 'carrierwave',             '1.2.3'
-gem 'mini_magick',             '4.8.0'
-gem 'will_paginate',           '3.1.6'
+gem 'bcrypt', '3.1.13'
+gem 'faker',  '1.9.3'
+gem 'carrierwave',             '1.3.1'
+gem 'mini_magick',             '4.9.3'
+gem 'will_paginate',           '3.1.7'
 gem 'bootstrap-will_paginate', '1.0.0'
-gem 'bootstrap-sass', '3.3.7'
-gem 'puma',         '3.11.4'
-gem 'sass-rails',   '5.0.7'
+gem 'bootstrap-sass', '3.4.1'
+gem 'puma',         '3.12.1'
+gem 'sassc-rails',   '2.1.2'
 gem 'sprockets', '~>3.7.2'
-gem 'uglifier',     '4.1.11'
-gem 'coffee-rails', '4.2.2'
-gem 'jquery-rails', '4.3.3'
-gem 'turbolinks',   '5.1.1'
-gem 'jbuilder',     '2.7.0'
+gem 'uglifier',     '4.1.20'
+gem 'jquery-rails', '4.3.5'
+gem 'turbolinks',   '5.2.0'
+gem 'jbuilder',     '2.9.1'
 
 group :development, :test do
-  gem 'sqlite3', '1.3.13'
-  gem 'byebug',  '10.0.2', platform: :mri
+  gem 'sqlite3', '1.4.1'
+  gem 'byebug',  '11.0.1', platform: :mri
 end
 
 group :development do
-  gem 'web-console',           '3.6.2'
+  gem 'better_errors',         '~>2.5.1'
+  gem 'binding_of_caller',     '~>0.8.0'
+  gem 'web-console',           '3.7.0'
   gem 'listen',                '3.1.5'
-  gem 'spring',                '2.0.2'
+  gem 'spring',                '2.1.0'
   gem 'spring-watcher-listen', '2.0.1'
 end
 
 group :test do
   gem 'rails-controller-testing', '1.0.2'
   gem 'minitest',                 '5.11.3'
-  gem 'minitest-reporters',       '1.3.0'
-  gem 'guard',                    '2.14.2'
+  gem 'minitest-reporters',       '1.3.6'
+  gem 'guard',                    '2.15.0'
   gem 'guard-minitest',           '2.4.6'
 end
 
 group :production do
-  ruby "2.5.3"
-  gem 'pg', '1.0.0'
+  gem 'pg', '1.1.4'
   gem 'fog-backblaze', '0.2.0'
 end
 
