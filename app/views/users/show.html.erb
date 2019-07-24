@@ -1,25 +1,27 @@
 <% provide(:title, @user.name) %>
-<div class="row">
-  <aside class="col-md-4">
-    <section class="user_info">
-      <h1>
-        <%= gravatar_for @user %>
-        <%= @user.name %>
-      </h1>
-    </section>
-    <section class="stats">
-      <%= render 'shared/stats' %>
-      <%= render 'follow_form' if logged_in? %>
-    </section>
-  </aside>
-  <div class="col-md-8">
-    
-    <% if @user.microposts.any? %>
-      <h3>Microposts (<%= @user.microposts.count %>)</h3>
-      <ol class="microposts">
-        <%= render @microposts %>
-      </ol>
-      <%= will_paginate @microposts %>
-    <% end %>
+<div class="container-fluid h-100 bg-light text-dark">
+  <div class="row justify-content-center">
+    <aside class="col-md-4">
+      <section class="user_info">
+        <h1>
+          <%= gravatar_for @user %>
+          <%= @user.name %>
+        </h1>
+      </section>
+      <section class="stats">
+        <%= render 'shared/stats' %>
+        <%= render 'follow_form' if logged_in? %>
+      </section>
+    </aside>
+    <div class="col-md-8">
+      
+      <% if @user.microposts.any? %>
+        <h3>Microposts (<%= @user.microposts.count %>)</h3>
+        <ol class="microposts">
+          <%= render @microposts %>
+        </ol>
+        <%= will_paginate @microposts, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer, class: 'justify-content-center'%>
+      <% end %>
+    </div>
   </div>
 </div>

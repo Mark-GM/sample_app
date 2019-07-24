@@ -1,6 +1,3 @@
-@import "bootstrap-sprockets";
-@import "bootstrap";
-
 /* mixins, variables, etc. */
 
 $gray-medium-light: #eaeaea;
@@ -33,7 +30,6 @@ textarea {
   }
 }
 
-
 /* typography */
 
 h1, h2, h3, h4, h5, h6 {
@@ -53,14 +49,13 @@ h2 {
   margin-bottom: 30px;
   text-align: center;
   font-weight: normal;
-  color: $gray-light;
+  color: $gray-600;
 }
 
 p {
   font-size: 1.1em;
   line-height: 1.7em;
 }
-
 
 /* header */
 
@@ -71,7 +66,8 @@ p {
   color: white;
   text-transform: uppercase;
   letter-spacing: -1px;
-  padding-top: 9px;
+  padding-top: 0.2%;
+  padding-left: 2%;
   font-weight: bold;
   &:hover {
     color: white;
@@ -79,6 +75,11 @@ p {
   }
 }
 
+#navbarId {
+  padding-top: 0%;
+  padding-bottom: 0.1%;
+  background-color: #121212;
+}
 
 /* footer */
 
@@ -86,11 +87,11 @@ footer {
   margin-top: 45px;
   padding-top: 5px;
   border-top: 1px solid $gray-medium-light;
-  color: $gray-light;
+  color: $gray-600;
   a {
-    color: $gray;
+    color: $gray-700;
     &:hover {
-      color: $gray-darker;
+      color: $gray-900;
     }
   }
   small {
@@ -111,12 +112,11 @@ img {
   display: none;
 }
 */
+
 .kittenpic {
   display: block;
-   margin-left: auto;
-   margin-right: auto;
-}
-
+  margin: auto;
+  }
 
 /* miscellaneous */
 
@@ -173,7 +173,7 @@ aside {
   a {
     float: left;
     padding: 0 10px;
-    border-left: 1px solid $gray-lighter;
+    border-left: 1px solid $gray-200;
     color: gray;
     &:first-child {
       padding-left: 0;
@@ -226,12 +226,12 @@ input {
   }
 }
 
-.field_with_errors {
+/* .field_with_errors {
   @extend .has-error;
   .form-control {
     color: $state-danger-text;
   }
-}
+} */
 
 .checkbox {
   margin-top: -10px;
@@ -256,7 +256,7 @@ input {
   li {
     overflow: auto;
     padding: 10px 0;
-    border-bottom: 1px solid $gray-lighter;
+    border-bottom: 1px solid $gray-200;;
   }
 }
 
@@ -283,7 +283,7 @@ input {
     }
   }
   .timestamp {
-    color: $gray-light;
+    color: $gray-600;
     display: block;
     margin-left: 60px;
   }
