@@ -5,7 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-ruby "2.5.5"
+ruby "2.6.3"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem "bootsnap", ">= 1.1.0", require: false # Boot large ruby/rails apps faster
 gem 'rails', '~> 5.2.3'
@@ -16,7 +16,6 @@ gem 'mini_magick',             '4.9.5'
 gem 'will_paginate',           '3.1.7'
 gem 'bootstrap-will_paginate', git: 'https://github.com/yrgoldteeth/bootstrap-will_paginate/'
 gem 'bootstrap', '4.3.1'
-#gem 'bootstrap-sass', '3.4.1'
 gem 'puma',         '4.0.1'
 gem 'sassc-rails',   '2.1.2'
 gem 'sprockets', '~>3.7.2'
