@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class UsersIndexTest < ActionDispatch::IntegrationTest
-  
+
   def setup
     @admin     = users(:michael)
     @non_admin = users(:archer)
@@ -11,8 +11,8 @@ class UsersIndexTest < ActionDispatch::IntegrationTest
     log_in_as(@admin)
     get users_path
     assert_template 'users/index'
-    assert_select "ul.pagination", count: 2
-    first_page_of_users = User.paginate(page: 1)
+    assert_select "nav.pagination", count: 2
+    @pagy, first_page_of_users = pagy(User, page: 1)
     first_page_of_users.each do |user|
       if user.activated?
         assert_select "a[href=?]", user_path(user), text: user.name
@@ -27,7 +27,7 @@ class UsersIndexTest < ActionDispatch::IntegrationTest
       delete user_path(@non_admin)
     end
   end
-  
+
   test "index as non-admin" do
     log_in_as(@non_admin)
     get users_path

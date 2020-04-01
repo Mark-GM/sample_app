@@ -9,6 +9,7 @@ class MicropostsController < ApplicationController
       redirect_to root_url
     else
       @feed_items = []
+      @pagy, @feed_items = pagy(current_user.feed, items: 5,link_extra: 'data-remote="true"')
       render 'static_pages/home'
     end
   end

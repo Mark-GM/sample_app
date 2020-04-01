@@ -14,14 +14,13 @@
       </section>
     </aside>
     <div class="col-md-8">
-      
-      <% if @user.microposts.any? %>
-        <h3>Microposts (<%= @user.microposts.count %>)</h3>
-        <ol class="microposts">
-          <%= render @microposts %>
-        </ol>
-        <%= will_paginate @microposts, :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer, class: 'justify-content-center'%>
-      <% end %>
+      <h3><%= @user.name %>'s Microposts</h3>
+      <div class="feed">
+        <%= render 'shared/user_microposts' %>
+      </div>
+      <div id="div_next_link">
+        <%= render 'shared/next_link' %>
+      </div>
     </div>
   </div>
 </div>

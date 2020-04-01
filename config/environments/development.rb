@@ -44,9 +44,9 @@ Rails.application.configure do
   # Highlight code that triggered database queries in logs.
   config.active_record.verbose_query_logs = true
 
-  # SQLite databases have used 't' and 'f' to serialize 
-  # boolean values and must have old data converted to 1 and 0 
-  #(its native boolean serialization) before setting this flag to true.
+  # SQLite databases have used 't' and 'f' to serialize
+  # boolean values and must have old data converted to 1 and 0
+  # (its native boolean serialization) before setting this flag to true.
   config.active_record.sqlite3.represent_boolean_as_integer = true
 
   # Debug mode disables concatenation and preprocessing of assets.

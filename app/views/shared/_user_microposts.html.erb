@@ -1,0 +1,5 @@
+<% if @user.microposts.any? %>
+  <ol id="microposts">
+    <%= render @microposts %>
+  </ol>
+<% end %>

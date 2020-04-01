@@ -2,11 +2,11 @@
 <div class="container bg-light text-dark">
   <h1>All users</h1>
 
-  <%= will_paginate :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer, class: 'justify-content-center' %>
+  <%= pagy_bootstrap_combo_nav_js(@pagy).html_safe %>
 
   <ul class="users">
     <%= render @users %>
   </ul>
 
-  <%= will_paginate :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer, class: 'justify-content-center' %>
+  <%= pagy_bootstrap_combo_nav_js(@pagy).html_safe %>
 </div>

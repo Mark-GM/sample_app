@@ -31,9 +31,9 @@ Rails.application.configure do
   # Store uploaded files on the local file system in a temporary directory
   config.active_storage.service = :test
 
-  # SQLite databases have used 't' and 'f' to serialize 
-  # boolean values and must have old data converted to 1 and 0 
-  #(its native boolean serialization) before setting this flag to true.
+  # SQLite databases have used 't' and 'f' to serialize
+  # boolean values and must have old data converted to 1 and 0
+  # (its native boolean serialization) before setting this flag to true.
   config.active_record.sqlite3.represent_boolean_as_integer = true
 
   config.action_mailer.perform_caching = false
@@ -43,7 +43,6 @@ Rails.application.configure do
   # ActionMailer::Base.deliveries array.
   config.action_mailer.delivery_method = :test
   config.action_mailer.default_url_options = { host: 'example.com' }
-
 
   # Print deprecation notices to the stderr.
   config.active_support.deprecation = :stderr

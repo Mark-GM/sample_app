@@ -9,7 +9,7 @@ class MicropostsInterfaceTest < ActionDispatch::IntegrationTest
   test "micropost interface" do
     log_in_as(@user)
     get root_path
-    assert_select 'ul.pagination'
+    assert_select 'div#div_next_link', count: 1
     assert_select 'input[type=file]'
     # Invalid submission
     assert_no_difference 'Micropost.count' do
@@ -28,7 +28,8 @@ class MicropostsInterfaceTest < ActionDispatch::IntegrationTest
     assert_match content, response.body
     # Delete post
     assert_select 'a', text: 'delete'
-    first_micropost = @user.microposts.paginate(page: 1).first
+    @pagy, @microposts = pagy(@user.microposts, page: 1, items: 5, link_extra: 'data-remote="true"')
+    first_micropost = @microposts.first
     assert_difference 'Micropost.count', -1 do
       delete micropost_path(first_micropost)
     end

@@ -25,7 +25,8 @@
         <ul class="users follow">
           <%= render @users %>
         </ul>
-        <%= will_paginate :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer, class: 'justify-content-center'%>
+        <%= pagy_bootstrap_combo_nav_js(@pagy).html_safe %>
+        <%#= will_paginate :renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer, class: 'justify-content-center'%>
       <% end %>
     </div>
   </div>

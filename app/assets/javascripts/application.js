@@ -14,5 +14,8 @@
 //= require popper
 //= require bootstrap
 //= require rails-ujs
+//= require pagy
 //= require turbolinks
 //= require_tree .
+
+window.addEventListener("turbolinks:load", Pagy.init);
