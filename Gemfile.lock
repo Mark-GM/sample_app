@@ -157,7 +157,7 @@ GEM
     oj (3.10.6)
     pagy (3.7.5)
     parallel (1.19.1)
-    parser (2.7.1.0)
+    parser (2.7.1.1)
       ast (~> 2.4.0)
     pg (1.2.3)
     popper_js (1.16.0)
@@ -219,7 +219,7 @@ GEM
       rexml
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 1.4.0, < 2.0)
-    rubocop-rails (2.5.1)
+    rubocop-rails (2.5.2)
       activesupport
       rack (>= 1.1)
       rubocop (>= 0.72.0)
@@ -290,14 +290,14 @@ DEPENDENCIES
   meta_request (= 0.7.2)
   minitest (= 5.14.0)
   minitest-reporters (= 1.4.2)
-  oj (~> 3.10.5)
+  oj (~> 3.10.6)
   pagy (~> 3.7.5)
   pg (= 1.2.3)
   puma (= 4.3.3)
   rails (~> 5.2.4.2)
   rails-controller-testing (= 1.0.4)
   rails-erd (~> 1.6.0)
-  rubocop-rails (~> 2.5.0)
+  rubocop-rails (~> 2.5.2)
   sassc-rails (= 2.1.2)
   spring (= 2.1.0)
   spring-watcher-listen (= 2.0.1)
@@ -309,7 +309,7 @@ DEPENDENCIES
   web-console (= 3.7.0)
 
 RUBY VERSION
-   ruby 2.6.5p114
+   ruby 2.7.1p83
 
 BUNDLED WITH
    2.1.4

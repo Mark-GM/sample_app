@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.6.5'
+ruby '2.7.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'bcrypt', '3.1.13'
 gem 'bootsnap', '>= 1.4.6', require: false # Boot large ruby/rails apps faster
@@ -13,7 +13,7 @@ gem 'carrierwave', '2.1.0'
 gem 'faker', '~> 2.11.0'
 gem 'jbuilder',     '2.10.0'
 gem 'jquery-rails', '4.3.5'
-gem 'oj', '~> 3.10.5'
+gem 'oj', '~> 3.10.6'
 gem 'pagy', '~> 3.7.5'
 gem 'puma', '4.3.3'
 gem 'rails', '~> 5.2.4.2'
@@ -33,7 +33,7 @@ group :development do
   gem 'listen',                '3.2.1'
   gem 'meta_request',          '0.7.2'
   gem 'rails-erd',             '~> 1.6.0'
-  gem 'rubocop-rails',         '~> 2.5.0'
+  gem 'rubocop-rails',         '~> 2.5.2'
   gem 'spring',                '2.1.0'
   gem 'spring-watcher-listen', '2.0.1'
   gem 'web-console',           '3.7.0'
