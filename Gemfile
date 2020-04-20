@@ -23,7 +23,7 @@ gem 'turbolinks',   '5.2.1'
 gem 'uglifier',     '4.2.0'
 
 group :development, :test do
-  gem 'byebug',  '11.1.1', platform: :mri
+  gem 'byebug',  '~> 11.1.2', platform: :mri
   gem 'sqlite3', '1.4.2'
 end
 
