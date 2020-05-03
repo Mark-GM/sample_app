@@ -30,3 +30,6 @@
 /public/uploads
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+# Ignore local env file
+.env.development.local
