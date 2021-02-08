@@ -7,7 +7,7 @@ ruby "2.7.1"
 gem "bcrypt", "~> 3.1.13"
 gem "bootsnap", ">= 1.4.6", require: false # Boot large ruby/rails apps faster
 gem "bootstrap", "~> 4.4.1"
-gem "carrierwave", "1.3.1"
+gem "carrierwave", "1.3.2"
 gem "faker", "~> 2.11.0"
 gem "fog-backblaze", "~> 0.3.0"
 gem "jbuilder", "~> 2.10.0"
