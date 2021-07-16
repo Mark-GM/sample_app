@@ -2,7 +2,7 @@
 
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
-ruby "2.7.1"
+ruby "2.7.4"
 
 gem "bcrypt", "~> 3.1.13"
 gem "bootsnap", ">= 1.4.6", require: false # Boot large ruby/rails apps faster
