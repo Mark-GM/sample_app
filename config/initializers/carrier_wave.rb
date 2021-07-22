@@ -11,6 +11,7 @@ if Rails.env.production?
       b2_bucket_name: ENV['B2_BUCKET_NAME'],
       b2_bucket_id: ENV['B2_BUCKET_ID']
     }
+    config.storage = :fog
     config.fog_directory = ENV['B2_BUCKET_NAME']
   end
 end
